@@ -1,0 +1,121 @@
+/* Estilos generales */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f5f5f5;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh; /* Altura mínima de toda la pantalla */
+}
+
+/* Encabezado */
+header {
+    background-color: #333;
+    color: white;
+    display: flex;
+    align-items: center; /* Alinea verticalmente */
+    justify-content: space-between; /* Distribuye los elementos: izquierda y derecha */
+    padding: 15px;
+    width: 100%;
+}
+nav ul {
+    list-style: none;
+    padding: 0;
+}
+
+nav ul li {
+    display: inline;
+    margin: 0 15px;
+}
+
+nav ul li a {
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+/* Productos */
+/* Asegurar que los productos ocupen el espacio restante */
+.productos {
+    flex: 1; /* Esto hace que el contenido principal empuje el footer hacia abajo */
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    padding: 20px;
+    flex-wrap: wrap;
+}
+
+.producto {
+    background-color: white;
+    padding: 15px;
+    text-align: center;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    width: 250px;
+}
+
+.producto img {
+    width: 100%;
+    border-radius: 5px;
+}
+
+button {
+    background-color: #ff6600;
+    color: white;
+    border: none;
+    padding: 10px;
+    margin-top: 10px;
+    cursor: pointer;
+    border-radius: 5px;
+    transition: transform 0.3s ease; /* Añadimos la transición */
+}
+
+button:hover {
+    background-color: #cc5500;
+    transform: scale(1.1); /* Este es el efecto de zoom */
+}
+
+/* Pie de página */
+footer {
+    background-color: #333;
+    color: white;
+    text-align: center;
+    padding: 15px;
+    margin-top: auto; /* Empuja el footer hacia la parte inferior */
+    width: 100%;
+}
+.whatsapp-button {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    width: 60px;
+    height: 60px;
+    z-index: 1000;
+}
+
+.whatsapp-button img {
+    width: 80%;  /* Reduce el tamaño de la imagen dentro del botón */
+    height: 80%;
+    margin: 10%;  /* Centra la imagen dentro del botón */
+    border-radius: 50%;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    transition: transform 0.3s ease;
+}
+
+.whatsapp-button img:hover {
+    transform: scale(1.1);
+}
+.logo {
+    width: 100px; /* Ajusta el tamaño del logo */
+    height: auto;
+    margin-right: 15px; /* Espacio entre el logo y el título */
+}
+header h1 {
+    margin: 0;
+    font-size: 24px;
+}
+.header-left {
+    display: flex;
+    align-items: center; /* Alinea verticalmente */
+}
