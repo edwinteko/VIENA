@@ -1,15 +1,14 @@
 document.addEventListener("DOMContentLoaded", () => {
     let audio = document.getElementById("musica");
+    let toggleButton = document.getElementById("toggle-audio");
 
-    if (!audio) {
-        console.error("No se encontró el elemento <audio>");
-        return;
-    }
-
-    // Se activa el audio al primer clic del usuario
-    document.body.addEventListener("click", () => {
-        audio.play().catch(error => {
-            console.log("El navegador bloqueó la reproducción automática.", error);
-        });
-    }, { once: true }); // Solo ejecuta la función una vez
+    toggleButton.addEventListener("click", () => {
+        if (audio.paused) {
+            audio.play();
+            toggleButton.textContent = "🔇 Silenciar";
+        } else {
+            audio.pause();
+            toggleButton.textContent = "🔊 Música";
+        }
+    });
 });
