@@ -1,6 +1,6 @@
 /* Estilos generales */
 body {
-    font-family: Arial, sans-serif;
+    font-family: 'Poppins', sans-serif;
     margin: 0;
     padding: 0;
     background-color: #f5f5f5;
@@ -9,19 +9,53 @@ body {
     min-height: 100vh; /* Altura mínima de toda la pantalla */
 }
 
-/* Encabezado */
+h1, h2 {
+    font-family: 'Bebas Neue', sans-serif;
+}
+h1 {
+    font-size: 4rem!important; /* Aumenta el tamaño */
+    font-weight: bold;
+    text-transform: uppercase;
+    color: #e67e22; /* Para que resalte */
+    letter-spacing: 3px;
+    text-shadow: 3px 3px 10px rgba(255, 102, 0, 0.5);
+}
 header {
     background-color: #333;
     color: white;
     display: flex;
-    align-items: center; /* Alinea verticalmente */
-    justify-content: space-between; /* Distribuye los elementos: izquierda y derecha */
+    align-items: center;
+    justify-content: space-between;
     padding: 15px;
     width: 100%;
+    flex-wrap: wrap; /* Permite que los elementos se ajusten en pantallas pequeñas */
+    
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    background-color: #333; /* Asegura que el fondo siga visible */
+    z-index: 1000; /* Para que esté por encima del resto del contenido */
 }
+body {
+    padding-top: 120px; /* Ajusta este valor según la altura del header */
+}
+.header-left {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+.logo {
+    width: 80px;
+    height: auto;
+}
+/* Menú de navegación */
 nav ul {
+    display: flex;
+    gap: 15px;
     list-style: none;
     padding: 0;
+    margin: 0;
 }
 
 nav ul li {
@@ -33,17 +67,23 @@ nav ul li a {
     color: white;
     text-decoration: none;
     font-weight: bold;
+    transition: color 0.3s;
+}
+
+nav ul li a:hover {
+    color: #ff6600; /* Resalta al pasar el mouse */
 }
 
 /* Productos */
 /* Asegurar que los productos ocupen el espacio restante */
 .productos {
-    flex: 1; /* Esto hace que el contenido principal empuje el footer hacia abajo */
+    background-color: #f9f6f1; /* Fondo gris claro */
+    padding: 40px 20px;
     display: flex;
     justify-content: center;
     gap: 20px;
-    padding: 20px;
     flex-wrap: wrap;
+    border-radius: 10px;
 }
 
 .producto {
@@ -53,6 +93,11 @@ nav ul li a {
     border-radius: 10px;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
     width: 250px;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+.producto:hover {
+    transform: scale(1.05); /* Hace que el producto crezca un poco */
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2); /* Sombra más intensa */
 }
 
 .producto img {
@@ -61,19 +106,18 @@ nav ul li a {
 }
 
 button {
-    background-color: #ff6600;
-    color: white;
+    background: linear-gradient(45deg, #ff6600, #e64a19);
     border: none;
-    padding: 10px;
+    padding: 12px;
     margin-top: 10px;
     cursor: pointer;
-    border-radius: 5px;
-    transition: transform 0.3s ease; /* Añadimos la transición */
+    border-radius: 8px;
+    font-size: 16px;
+    transition: transform 0.2s ease, background 0.3s ease;
 }
-
 button:hover {
-    background-color: #cc5500;
-    transform: scale(1.1); /* Este es el efecto de zoom */
+    background: linear-gradient(45deg, #e64a19, #ff3300);
+    transform: scale(1.1);
 }
 
 /* Pie de página */
@@ -106,16 +150,25 @@ footer {
 .whatsapp-button img:hover {
     transform: scale(1.1);
 }
-.logo {
-    width: 100px; /* Ajusta el tamaño del logo */
-    height: auto;
-    margin-right: 15px; /* Espacio entre el logo y el título */
-}
+
 header h1 {
     margin: 0;
     font-size: 24px;
 }
-.header-left {
-    display: flex;
-    align-items: center; /* Alinea verticalmente */
+#toggle-audio {
+    position: fixed;
+    bottom: 20px;
+    left: 20px;
+    background-color: #333;
+    color: white;
+    border: none;
+    padding: 10px;
+    cursor: pointer;
+    border-radius: 5px;
+    transition: background-color 0.3s;
+    z-index: 9999; /* Asegura que siempre esté en primer plano */
 }
+
+#toggle-audio:hover {
+    background-color: #ff6600;
+}  
