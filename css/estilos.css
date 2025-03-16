@@ -26,7 +26,7 @@ header {
     display: flex;
     align-items: center;
     justify-content: space-between;
-    padding: 15px;
+    padding: 14px;
     width: 100%;
     flex-wrap: wrap; /* Permite que los elementos se ajusten en pantallas pequeñas */
     
@@ -122,12 +122,15 @@ button:hover {
 
 /* Pie de página */
 footer {
-    background-color: #333;
-    color: white;
-    text-align: center;
-    padding: 15px;
-    margin-top: auto; /* Empuja el footer hacia la parte inferior */
-    width: 100%;
+    position: fixed; /* Fija el footer en la pantalla */
+    bottom: 0; /* Lo deja pegado en la parte inferior */
+    width: 100%; /* Ocupa todo el ancho */
+    background-color: #333; /* Color de fondo */
+    color: white; /* Color del texto */
+    text-align: center; /* Centra el texto */
+    padding: 8px 0; /* Reduce el espacio arriba y abajo */
+    font-size: 14px; /* Reduce el tamaño del texto */
+    z-index: 1000; /* Asegura que quede sobre otros elementos */
 }
 .whatsapp-button {
     position: fixed;
@@ -135,7 +138,7 @@ footer {
     right: 20px;
     width: 60px;
     height: 60px;
-    z-index: 1000;
+    z-index: 9999;
 }
 
 .whatsapp-button img {
@@ -172,3 +175,42 @@ header h1 {
 #toggle-audio:hover {
     background-color: #ff6600;
 }  
+.destacado {
+    background: linear-gradient(45deg, #FFD700, #FFB800); /* Fondo dorado */
+    color: black; /* Letras negras para mejor contraste */
+    font-weight: bold;
+    border: 2px solid #DAA520; /* Borde dorado más oscuro */
+    box-shadow: 0 0 15px rgba(218, 165, 32, 0.7); /* Efecto de brillo */
+}
+
+.destacado:hover {
+    transform: scale(1.1); /* Agranda un poco al pasar el mouse */
+    box-shadow: 0 0 20px rgba(218, 165, 32, 1);
+}
+
+
+/* Estilos solo para "Destacados" en el menú */
+nav ul li a.destacado-nav {
+    color: #FFD700 !important; /* Color dorado */
+    font-weight: bold; /* Negrita para resaltar */
+    text-transform: uppercase; /* MAYÚSCULAS para destacar más */
+    text-shadow: 0 0 10px rgba(255, 215, 0, 0.8); /* Brillo dorado */
+}
+
+/* Al pasar el mouse */
+nav ul li a.destacado-nav:hover {
+    color: #FFB800 !important; /* Un dorado más intenso */
+    text-shadow: 0 0 15px rgba(255, 184, 0, 1);
+}
+/* Estilos solo para "Descuento" en el menú */
+nav ul li a.descuento-nav {
+    color: #FF4500 !important; /* Naranja rojizo */
+    font-weight: bold; /* Negrita */
+    text-transform: uppercase; /* MAYÚSCULAS */
+    text-shadow: 0 0 10px rgba(255, 69, 0, 0.8); /* Brillo */
+}
+
+/* Al pasar el mouse */
+nav ul li a.descuento-nav:hover {
+    color: #FF6347 !important; /* Rojo más claro */
+    text-shadow: 0 0 15px rgba(255, 99, 71, 1);} 
