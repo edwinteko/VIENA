@@ -13,7 +13,7 @@ h1, h2 {
     font-family: 'Bebas Neue', sans-serif;
 }
 h1 {
-    font-size: 3.5rem!important; /* Aumenta el tamaño */
+    font-size: 3rem!important; /* Aumenta el tamaño */
     font-weight: bold;
     text-transform: uppercase;
     color: #e67e22; /* Para que resalte */
