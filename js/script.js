@@ -5,10 +5,10 @@ document.addEventListener("DOMContentLoaded", () => {
     toggleButton.addEventListener("click", () => {
         if (audio.paused) {
             audio.play();
-            toggleButton.textContent = "🔇 Silenciar";
+            toggleButton.textContent = "🔇";
         } else {
             audio.pause();
-            toggleButton.textContent = "🔊 Música";
+            toggleButton.textContent = "🔊";
         }
     });
 });
