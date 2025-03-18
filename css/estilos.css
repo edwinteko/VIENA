@@ -13,7 +13,7 @@ h1, h2 {
     font-family: 'Bebas Neue', sans-serif;
 }
 h1 {
-    font-size: 4rem!important; /* Aumenta el tamaño */
+    font-size: 3.5rem!important; /* Aumenta el tamaño */
     font-weight: bold;
     text-transform: uppercase;
     color: #e67e22; /* Para que resalte */
@@ -213,4 +213,4 @@ nav ul li a.descuento-nav {
 /* Al pasar el mouse */
 nav ul li a.descuento-nav:hover {
     color: #FF6347 !important; /* Rojo más claro */
-    text-shadow: 0 0 15px rgba(255, 99, 71, 1);} 
+    text-shadow: 0 0 15px rgba(255, 99, 71, 1);}
