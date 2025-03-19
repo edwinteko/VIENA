@@ -7,6 +7,8 @@ body {
     display: flex;
     flex-direction: column;
     min-height: 100vh; /* Altura mínima de toda la pantalla */
+    padding-top: 100px; /* Ajusta este valor según la altura del header */
+    padding-bottom: 40px;
 }
 
 h1, h2 {
@@ -37,9 +39,7 @@ header {
     background-color: #333; /* Asegura que el fondo siga visible */
     z-index: 1000; /* Para que esté por encima del resto del contenido */
 }
-body {
-    padding-top: 120px; /* Ajusta este valor según la altura del header */
-}
+
 .header-left {
     display: flex;
     align-items: center;
@@ -77,17 +77,19 @@ nav ul li a:hover {
 /* Productos */
 /* Asegurar que los productos ocupen el espacio restante */
 .productos {
-    background-color: #f9f6f1; /* Fondo gris claro */
-    padding: 40px 20px;
+    background-color:#8da3b8; /* Fondo gris claro */
+    padding: 30px 20px;
     display: flex;
     justify-content: center;
-    gap: 20px;
+    gap: 10px;/*espacio entre productos*/
     flex-wrap: wrap;
     border-radius: 10px;
 }
 
+
 .producto {
-    background-color: white;
+    
+    background: linear-gradient(45deg, #007BFF, #812f16);
     padding: 15px;
     text-align: center;
     border-radius: 10px;
@@ -98,6 +100,7 @@ nav ul li a:hover {
 .producto:hover {
     transform: scale(1.05); /* Hace que el producto crezca un poco */
     box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2); /* Sombra más intensa */
+    border: 2px solid #e67e22; /* Borde con color llamativo */
 }
 
 .producto img {
@@ -116,7 +119,7 @@ button {
     transition: transform 0.2s ease, background 0.3s ease;
 }
 button:hover {
-    background: linear-gradient(45deg, #e64a19, #ff3300);
+    background: linear-gradient(45deg, #e64a19, #daedd6);
     transform: scale(1.1);
 }
 
@@ -176,7 +179,7 @@ header h1 {
     background-color: #ff6600;
 }  
 .destacado {
-    background: linear-gradient(45deg, #FFD700, #FFB800); /* Fondo dorado */
+    background: linear-gradient(45deg, #FFD700, #76580b); /* Fondo dorado */
     color: black; /* Letras negras para mejor contraste */
     font-weight: bold;
     border: 2px solid #DAA520; /* Borde dorado más oscuro */
@@ -189,6 +192,36 @@ header h1 {
 }
 
 
+/* Estilo para productos en descuento */
+.descuento {
+    background: linear-gradient(45deg, #FF6347, #842908); /* Fondo rojo */
+    color: white; /* Letras blancas para el contraste */
+    font-weight: bold;
+    border: 2px solid #FF4500; /* Borde rojo más oscuro */
+    box-shadow: 0 0 15px rgba(255, 69, 0, 0.7); /* Efecto de brillo rojo */
+}
+
+.descuento:hover {
+    transform: scale(1.05); /* Agranda un poco al pasar el mouse */
+    box-shadow: 0 0 20px rgb(11, 1, 25);
+}
+/* Estilo para los botones de productos con descuento */
+.producto.descuento button {
+    background-color: #FFD700 !important; /* Color dorado para el fondo */
+    color: black !important; /* Texto negro para buen contraste */
+    border: 2px solid #FFD700 !important; /* Borde dorado */
+    padding: 12px 20px !important; /* Tamaño adecuado para el botón */
+    font-size: 16px !important; /* Tamaño de texto */
+    cursor: pointer !important; /* Cambia el cursor al pasar el mouse */
+    transition: all 0.3s ease !important; /* Transición suave al hacer hover */
+    border-radius: 8px; /* Bordes redondeados */
+}
+
+.producto.descuento button:hover {
+    background-color: #FFB600 !important; /* Un dorado más oscuro al pasar el mouse */
+    border: 2px solid #FFB600 !important; /* Borde dorado más oscuro */
+    transform: scale(1.1) !important; /* Aumenta el tamaño del botón */
+}
 /* Estilos solo para "Destacados" en el menú */
 nav ul li a.destacado-nav {
     color: #FFD700 !important; /* Color dorado */
@@ -197,6 +230,14 @@ nav ul li a.destacado-nav {
     text-shadow: 0 0 10px rgba(255, 215, 0, 0.8); /* Brillo dorado */
 }
 
+
+
+
+/* Al pasar el mouse */
+nav ul li a.destacado-nav:hover {
+    color: #FFB800 !important; /* Un dorado más intenso */
+    text-shadow: 0 0 15px rgba(255, 184, 0, 1);
+}
 /* Al pasar el mouse */
 nav ul li a.destacado-nav:hover {
     color: #FFB800 !important; /* Un dorado más intenso */
@@ -214,3 +255,4 @@ nav ul li a.descuento-nav {
 nav ul li a.descuento-nav:hover {
     color: #FF6347 !important; /* Rojo más claro */
     text-shadow: 0 0 15px rgba(255, 99, 71, 1);}
+
