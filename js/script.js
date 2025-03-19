@@ -23,4 +23,3 @@ function comprarProducto(boton) {
     let url = `https://wa.me/${numeroWhatsApp}?text=${mensaje}`;
     window.open(url, "_blank");
 }
-
